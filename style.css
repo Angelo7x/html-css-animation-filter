@@ -76,7 +76,7 @@
 }
 
 .ex-7-img:hover {
-    width: 700px;
+    filter: sepia(2);
     filter: contrast(200%);
 }
 
@@ -87,7 +87,7 @@
 .ex-8-img:hover {
     border-radius: 10px;
     filter: sepia(2);
-    width: 400px;
+    filter: grayscale(1);
 }
 
 .ex-9-img {
@@ -106,10 +106,41 @@
 }
 .ex-10-icon {
     font-size: 60px;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
+
+@keyframes spin {
+    0%{
+    transform: rotate(360deg)
+    }
+}
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation-name: spin2;
+    animation-duration: 1s;
+}
+
+@keyframes spin2 {
+    0%{
+        transform: rotate(0)
+    }
+
+    75% {
+        transform: rotate(270deg)
+    }
+
+    100% {
+        transform: rotate(0)
+    }
+    
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -139,3 +170,59 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white{
+    animation-name: button1;
+    animation-duration: 4s;
+}
+
+@keyframes button1 {
+    0%{
+        right:40%;
+    }
+ 
+     25%{
+         right:40%;
+     }
+ 
+    50%{
+        right:40%;
+    }
+     
+    75%{
+        right:40%;
+ 
+    }
+    100% {
+        right:40%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white{
+    animation-name: button1;
+    animation-duration: 4s;
+    animation-fill-mode: linear;
+}
+
+@keyframes button1 {
+    0%{
+       left:40%;
+   }
+
+    25%{
+        left:40%;
+    }
+
+   50%{
+       left:40%;
+   }
+    
+   75%{
+       left:40%;
+
+   }
+   100% {
+       left:40%;
+   }
+}
+
